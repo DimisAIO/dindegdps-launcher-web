@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Settings</title>
+<title>Pengaturan</title>
 <link rel="stylesheet" href="../css/quoicoubeh.css">
 <style>
     #updates {
@@ -61,32 +61,32 @@
 <body>
     <div class="container">
         <div class="left-div">
-            <a href="javascript:void(0)" onclick="load('updates')">Updates</a><br>
+            <a href="javascript:void(0)" onclick="load('updates')">Pembaruan</a><br>
             <a href="javascript:void(0)" onclick="load('gdps')">GDPS</a><br>
-            <a href="javascript:void(0)" onclick="load('launcher')">Launcher</a>
+            <a href="javascript:void(0)" onclick="load('launcher')">Peluncur</a>
         </div>
         <div class="right-div">
             <div id="updates">
-                <input type="checkbox" id="cupdates" onclick="applyupdcheck()">Automatically check for updates</input>
+                <input type="checkbox" id="cupdates" onclick="applyupdcheck()">Periksa pembaruan secara otomatis</input>
                 <br><br>
-                <span style="padding-left: 6px;">Update Channel:</span>
+                <span style="padding-left: 6px;">Saluran pembaruan:</span>
                 <select onchange="applyupdcheck()" name="Update Cannel" id="uchannel" size="1">
-                    <option value="Stable">Release</option>
-                    <option value="Beta">Beta (UNSTABLE)</option>
+                    <option value="Stable">Rilis:</option>
+                    <option value="Beta">Beta (TIDAK STABIL)</option>
                 </select>
             </div>
 
             <div id="gdps">
-                <input type="text" placeholder="Custom menuLoop" id="mlurl">&nbsp;<button onclick="music()">Set</button><br><br>
-                <a href="https://cdn.141412.xyz/menuloops/" target="_blank" rel="noreferrer noopenner">MenuLoop DB</a><br><br>
-                <a href="https://github.com/masckmaster2007/GDVCQI/releases/download/v1/GDVCQI.exe" download><button>Missing Dependencies?</button></a>&nbsp;<button onclick="cgdps()">Custom GDPSes</button>&nbsp;&nbsp;<a href="https://gallery.dgdps.us.to/?client">Gallery</a>            
+                <input type="text" placeholder="Custom menuLoop" id="mlurl">&nbsp;<button onclick="music()">Pasang</button><br><br>
+                <a href="https://cdn.141412.xyz/menuloops/" target="_blank" rel="noreferrer noopenner">Cari MenuLoop</a><br><br>
+                <a href="https://github.com/masckmaster2007/GDVCQI/releases/download/v1/GDVCQI.exe" download><button>Kurang Dependencies, Error?</button></a>&nbsp;<button onclick="cgdps()">GDPS Kustom</button>&nbsp;&nbsp;<a href="https://gallery.dgdps.us.to/?client">Galeri</a>            
             </div>
 
             <div id="launcher">
-                <input type="text" id="color" placeholder="Any color (eg: Yellow)"> <button onclick="quoicouSend('color://' + document.getElementById('color').value)">Apply</button><br><br>
-                <button onclick="quoicouSend('GoSimple')">Enable Simple Mode</button><br><br>
-                <button onclick="sreset()">Reset Settings</button><br><br>
-                <input type="checkbox" name="Close launcher" id="clauncher" onclick="applycloselauncher()">Close launcher after "Play"</input>
+                <input type="text" id="color" placeholder="Ketik warna (cnth: Yellow)"> <button onclick="quoicouSend('color://' + document.getElementById('color').value)">Pasang</button><br><br>
+                <button onclick="quoicouSend('GoSimple')">Nyalakan mode sederhana</button><br><br>
+                <button onclick="sreset()">Atur ulang semua</button><br><br>
+                <input type="checkbox" name="Close launcher" id="clauncher" onclick="applycloselauncher()">Tutup UI peluncur setelah menekan tombol "Mulai"</input>
             </div>
         </div>
     </div>
