@@ -1,4 +1,20 @@
-if(!navigator.userAgent.startsWith("UneTesla")) alert("This file needs to be opened on DindeGDPS"); // freakshow
+// Multilingual support for alert
+var lang = navigator.userAgent.split("-")[1];
+var languages = {
+    en: en,
+    fr: fr,
+    ru: ru,
+    nl: nl,
+    bg: bg,
+    el: el,
+    es: es,
+    tr: tr,
+    pt: pt,
+    idn: idn,
+};
+var phr = languages[lang] || en; // Default to English if language not found
+
+if(!navigator.userAgent.startsWith("UneTesla")) alert(phr.fileAlertText); // freakshow
 
 console.log(`%c     .--.
     /} p \             /}

@@ -1,5 +1,6 @@
 var en = {
     // libdinde.js
+    fileAlertText: "This file needs to be opened on DindeGDPS",
     srResetText: "Are you SURE you want to reset your settings to default? This action is IRREVERSIBLE\nDimisAIO will not take any accountability.",
     cgdpsText: "By enabling this, the dgdps:// protocol will be enabled. DimisAIO will not take any responsibility if you enable this option!\nDo you want to enable it?",
     destText: "Choose the destination GDPS (gd19, gd20, gd21, gd22, ...)",
@@ -46,6 +47,7 @@ var en = {
 
 var fr = {
     // libdinde.js
+    fileAlertText: "Ce fichier doit être ouvert sur DindeGDPS",
     srResetText: "Êtes-vous sûr de réinitialiser vos réglages par défaut? Cette action n'est PAS RÉVERSIBLE\nDimisAIO ne pourra pas être réponsable dans ce cas.",
     cgdpsText: "En activant cela, le protocole dgdps:// va être activé. En activant cette option, DimisAIO ne prendra aucune résponsabilité!\nVoulez-vous l'activez?",
     destText: "Choisissez le GDPS de destination (gd19, gd20, gd21, gd22, ...)",
@@ -92,6 +94,7 @@ var fr = {
 
 var ru = {
     // libdinde.js
+    fileAlertText: "Этот файл должен быть открыт на DindeGDPS",
     srResetText: "Вы уверены, что хотите сбросить настройки? Это действие необратимо!\nDimisAIO не понесёт за это ответственности.",
     cgdpsText: "При включении этого, протокол dgdps:// будет активирован. DimisAIO не несёт ответственности за эту функцию!\nВы хотите это включить?",
     destText: "Выберите путь к вашему GDPS (gd19, gd20, gd21, gd22, ...)",
@@ -138,6 +141,7 @@ var ru = {
 
 var nl = {
     // libdinde.js
+    fileAlertText: "Dit bestand moet worden geopend op DindeGDPS",
     srResetText: "Weet je zeker dat je de instellingen willen resetten? Dit actie valt NIET ONGEDAAN TE MAKEN\nDimisAIO neemt geen enkele verantwoording.",
     cgdpsText: "Als je deze optie inschakelt, wordt het dgdps:// protocol ingeschakeld. DimisAIO neemt geen enkele verantwoording!\nWil je het inschakelen?",
     destText: "Kies de bestemming GDPS (gd19, gd20, gd21, gd22, ...)",
@@ -184,6 +188,7 @@ var nl = {
 
 var bg = {
     // libdinde.js
+    fileAlertText: "Този файл трябва да бъде отворен на DindeGDPS",
     srResetText: "Сигурни ли сте, че искате да нулирате настройките си? Това действие е НЕОБРАТИМО\nDimisAIO не поема отговорност.",
     cgdpsText: "Като включите тази опция, dgdps:// протоколът ще бъде активиран. DimisAIO не поема отговорност, ако активирате това!\nЖелаете ли да я включите?",
     destText: "Изберете директория на GDPS (gd19, gd20, gd21, gd22, ...)",
@@ -230,6 +235,7 @@ var bg = {
     
 var el = {
     // libdinde.js
+    fileAlertText: 'Αυτό το αρχείο πρέπει να ανοιχθεί στο DindeGDPS',
     srResetText:
         'Θέλετε να επαναφέρετε τις ρυθμίσεις σας στις προεπιλεγμένες Αυτή η ενέργεια είναι ΑΜΕΤΑΚΛΗΤΗ. Ο DimisAIO δε θα λάβει καμία ευθύνη.',
     cgdpsText:
@@ -278,6 +284,7 @@ var el = {
 
 var es = {
     // libdinde.js
+    fileAlertText: 'Este archivo debe abrirse en DindeGDPS',
     srResetText:
         '¿Está SEGURO de que desea restablecer la configuración a la predeterminada? Esta acción es IRREVERSIBLE, DimisAIO no se va a hacer responsable.',
     cgdpsText:
@@ -326,6 +333,7 @@ var es = {
 
 var tr = {
     // libdinde.js
+    fileAlertText: 'Bu dosya DindeGDPS üzerinde açılmalıdır',
     srResetText:
         'Ayarları varsayılana sıfırlamak istediğinizden emin misiniz?\nBu eylem geri ALINAMAZ\nDimisAIO olacak şeylerden sorumlu değildir.',
     cgdpsText:
@@ -374,6 +382,7 @@ var tr = {
 
 var pt = {
     // libdinde.js
+    fileAlertText: 'Este arquivo precisa ser aberto no DindeGDPS',
     srResetText:
         'Você tem CERTEZA que quer redefinir suas configurações para o padrão? Esta ação é IRREVERSÍVEL\nDimisAIO não assumirá qualquer responsabilidade.',
     cgdpsText:
@@ -418,4 +427,54 @@ var pt = {
     backText: '< Voltar',
     browseText: 'Buscar',
     uninstallText: 'Desinstalar',
+};
+
+// i dont know how languages work so i just...
+// make a new one here, like rewriting stuff
+// -kenzieshane
+var idn = {
+    // libdinde.js
+    fileAlertText: 'File ini perlu dibuka di DindeGDPS',
+    srResetText: 'Apakah Anda YAKIN ingin mengatur ulang pengaturan Anda ke default? Tindakan ini TIDAK DAPAT DIBATALKAN\nDimisAIO tidak akan bertanggung jawab atas hal ini.',
+    cgdpsText: 'Dengan mengaktifkan ini, protokol dgdps:// akan diaktifkan. DimisAIO tidak akan bertanggung jawab jika Anda mengaktifkan opsi ini!\nApakah Anda ingin mengaktifkannya?',
+    destText: 'Pilih GDPS tujuan (gd19, gd20, gd21, gd22, ...)',
+    copyExit: 'Pilih',
+    musicConfirm: 'Unduh musiknya?',
+    // index.html
+    goodMorning: 'Selamat pagi',
+    goodAfternoon: 'Selamat siang',
+    goodEvening: 'Selamat malam',
+    toolsLink: 'Alat',
+    settingsLink: 'Pengaturan',
+    creditsLink: 'Kredit',
+    welcomeText: 'Selamat datang di',
+    noNewsText: 'Tidak ada berita untuk saat ini!',
+    altText: '[Akun lain? Tahan CTRL saat mengklik PLAY]',
+    // settings.html
+    updatesCat: 'Pembaruan',
+    autoUpdatesText: 'Secara otomatis periksa pembaruan',
+    updateChannelText: 'Saluran Pembaruan:',
+    missingDepText: 'Dependensi yang Hilang?',
+    customPSText: 'GDPS Kustom',
+    galleryText: 'Galeri',
+    menuloopText: 'Tautan Langsung (menuloop)',
+    defaultLangText: 'Bawaan',
+    simpleModeText: 'Aktifkan Mode Sederhana',
+    resetSettingsText: 'Atur Ulang Pengaturan',
+    closeLauncherText: 'Tutup launcher setelah "Play"',
+    UBLocationText: 'Posisi bilah menu: ',
+    UBCenter: 'Tengah',
+    UBLeft: 'Kiri',
+    UBRight: 'Kanan',
+    // more.html
+    moreSocialsText: 'Media sosial lainnya',
+    // credits.html
+    creditsText: 'Penghargaan!',
+    playersText: 'Pemain :',
+    musicText: '🎵 Musik 🎵',
+    usedFontsText: 'Tipografi yang digunakan di launcher :',
+    encouragementText: 'Klik PLAY dan TANDAI sebuah titik dalam sejarah kami',
+    backText: '< Kembali',
+    browseText: 'Jelajahi',
+    uninstallText: 'Uninstall',
 };
