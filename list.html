@@ -16,12 +16,12 @@
     body {   
       opacity: 0;
       transition: opacity .5s;   
-      background: black;
+      background: linear-gradient(90deg, rgba(0,0,0,1) 0%, darkblue 30%, darkblue 70%, rgba(0,0,0,1) 100%);
       color: cornflowerblue;
       font-family: Octarine;
     }
     #gdpsBox {
-        border-style: solid;
+        border-style: dashed;
         border-radius: 5px;
         border-color: white;
         display: flex;
@@ -41,6 +41,9 @@
     #mbot {
         margin-right: 10px;
     }
+    #mbot:hover {
+        color: lightcyan;
+    }
     #kys {
         display: flex;
         flex-direction: row;
@@ -53,7 +56,6 @@
     <div id="kys">
         <h1 id="title">GDPS List</h1>&nbsp;&nbsp;&nbsp;<h1><a href="https://gallery.dgdps.us.to" id="gallery">(Gallery)</a></h1>
     </div>
-    <script src="./list.js"></script>
     <script src="./js/libdinde.js"></script>
     <script>
 
@@ -63,42 +65,47 @@
             quoicouSend("delete://" + gdps);
         }
 
-        var gdpsList = gdpses.split("||");
-        gdpsList.forEach(element => {
-            // 1: Create Div
-            var x = document.createElement("div");
-            x.id = "gdpsBox";
-            // 2: Create and append image!
-            var y = document.createElement("img");
-            y.src = `../${element}/logo.png`;
-            y.height = "100";
-            y.width = "100";
-            x.append(y);
+        let gdpsList = [];
 
-            // 3: Create and append buttons?
-            var z = document.createElement("div");
-            z.id = "padding";
+        fetch("https://dindegdps.localhost/get/gdps")
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(element => {
+                var x = document.createElement("a");
+                x.id = "gdpsBox";
+                x.href = "javascript:quoicouSend('start://" + element + "')";
 
-            var title = document.createElement("h2");
-            title.innerHTML = element;
+                var y = document.createElement("img");
+                y.src = "https://dindegdps.localhost/get/img/" + element;
+                y.height = 100;
+                y.width = 100;
+                x.append(y);
 
-            var a = document.createElement("a");
-            a.innerText = phr.browseText;
-            a.href = "javascript:quoicouSend('explorer://" + element + "')";
-            a.id = "mbot";
+                var z = document.createElement("div");
+                z.id = "padding";
 
-            var b = document.createElement("a");
-            b.innerText = phr.uninstallText;
-            b.href = "javascript:uninstall('" + element + "')";
-            b.id = "mbot";
+                var title = document.createElement("h2");
+                title.innerText = element;
 
-            x.append(title);
-            z.append(a);
-            z.append(b);
-            x.append(z);
+                var a = document.createElement("a");
+                a.innerText = phr.browseText;
+                a.href = "javascript:quoicouSend('explorer://" + element + "')";
+                a.id = "mbot";
 
-            document.body.append(x);
-        });
+                var b = document.createElement("a");
+                b.innerText = phr.uninstallText;
+                b.href = "javascript:uninstall('" + element + "')";
+                b.id = "mbot";
+
+                x.append(title);
+                z.append(a);
+                z.append(b);
+                x.append(z);
+
+                document.body.append(x);
+            });
+        })
+        .catch(error => alert(error));
     </script>
 </body>
 </html>

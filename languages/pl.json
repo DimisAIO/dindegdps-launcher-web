@@ -1,0 +1,47 @@
+{
+    "srResetText":
+        "Czy jesteś pewien, że chcesz zresetować swoje ustawienia do domyślnych? Ta akcja jest nieodwracalna\nDimisAIO nie będzie ponosić żadnej odpowiedzialności.",
+    "cgdpsText":
+        "Włączając to, protokół dgdps:// zostanie włączony. DimisAIO nie przejmie żadnej odpowiedzialności, jeśli włączysz tę opcję!\nCzy chcesz ją włączyć?",
+    "destText": "Wybierz docelowy GDPS (gd19, gd20, gd21, gd22, ...)",
+    "copyExit": "Wybierz",
+    "musicConfirm": "Pobierz muzykę?",
+
+    "goodMorning": "Dzień dobry",
+    "goodAfternoon": "Dzień dobry",
+    "goodEvening": "Dobry wieczór",
+    "toolsLink": "Narzędzia",
+    "settingsLink": "Ustawienia",
+    "creditsLink": "Kredyty",
+    "welcomeText": "Witamy w",
+    "noNewsText": "Brak wiadomości na chwilę obecną!",
+    "altText": "Tryb Alt (konto)",
+
+    "updatesCat": "Aktualizacje",
+    "autoUpdatesText": "Automatycznie sprawdzaj uaktualnienia",
+    "updateChannelText": "Kanał aktualizacji:",
+    "missingDepText": "Brakujące treści zależne?",
+    "customPSText": "Niestandardowe GDPS",
+    "galleryText": "Galeria",
+    "menuloopText": "Link bezpośredni (menuloop)",
+    "defaultLangText": "Domyślnie",
+    "simpleModeText": "Włącz tryb prosty",
+    "resetSettingsText": "Zresetuj ustawienia",
+    "closeLauncherText": "Zamknij launcher po \"Play\"",
+    "UBLocationText": "Pozycja paska menu: ",
+    "UBCenter": "Środek",
+    "UBLeft": "Lewo",
+    "UBRight": "Prawy",
+
+    "moreSocialsText": "Więcej społeczności",
+
+    "creditsText": "Kredyty!",
+    "playersText": "Gracze:",
+    "musicText": "🎵 Muzyka 🎵",
+    "usedFontsText": "Czcionki używane w launcher:",
+    "encouragementText": "Kliknij ZAGRAJ i ZNAJ punkt w naszej historii",
+    "backText": "< Wstecz",
+    "browseText": "Przeglądaj",
+    "uninstallText": "Odinstaluj",
+    "syncButtonText": "Synchronizacja (wymagane konto)"
+}

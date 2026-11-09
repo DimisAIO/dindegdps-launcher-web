@@ -70,6 +70,7 @@
             <a href="javascript:void(0)" onclick="load('updates')" id="updatesCat">Updates</a><br>
             <a href="javascript:void(0)" onclick="load('gdps')">GDPS</a><br>
             <a href="javascript:void(0)" onclick="load('launcher')">Launcher</a>
+            <a href="credits.html">Credits</a>
         </div>
         <div class="right-div">
             <div id="updates">
@@ -109,6 +110,7 @@
                     <option value="es">Español</option>
                     <option value="tr">Türk</option>
                     <option value="pt">Português</option>
+                    <option value="pl">Polski</option>
                 </select><br><br>
                 <span style="padding-left: 6px;" id="UBLocationText">Menu bar position:</span>
                 <select onchange="setpos()" name="Menu bar position" id="mbpos" size="1">
@@ -117,6 +119,8 @@
                     <option value="Right" id="UBRight">Right</option>
                 </select><br><br>
                 <input type="checkbox" name="Close launcher" id="clauncher" onclick="applycloselauncher()"><span id="closeLauncherText">Close launcher after "Play"</span></input>
+                <br><br>
+                <input type="checkbox" name="Sync" id="sync" onclick="quoicouSend('reversesyncbtn')"><span id="syncButtonText">Sync (Account Required)</span></input>
                 <hr>
                 <h1>⚠️ Danger</h1>
                 <button onclick="quoicouSend('GoSimple')" id="simpleModeText">Enable Simple Mode</button><br><br>
@@ -142,6 +146,7 @@
         UBLeft.innerText = phr.UBLeft;
         UBCenter.innerText = phr.UBCenter;
         UBRight.innerText = phr.UBRight;
+        syncButtonText.innerText = phr.syncButtonText;
 
 
         var lang = navigator.userAgent.split("-")[1];

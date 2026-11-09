@@ -21,25 +21,26 @@ function quoicouSend(lol) {
     window.chrome.webview.postMessage(lol);
 }
 
-// Create an object to map language codes to language arrays
-var languages = {
-    en: en,
-    fr: fr,
-    ru: ru,
-    nl: nl,
-    bg: bg,
-    el: el,
-    es: es,
-    tr: tr,
-    pt: pt,
-};
+if(location.href.endsWith("settings.html")) {
+    fetch("https://dindegdps.localhost/get/settings")
+        .then(response => response.json())
+        .then(settings => {
+            document.getElementById("cupdates").checked = settings.cupdates;
+            document.getElementById("clauncher").checked = settings.clauncher;
+            document.getElementById("uchannel").value = settings.uchannel;
+            document.getElementById("lang").value = settings.lang;
+            document.getElementById("sync").checked = settings.sync;
+            document.getElementById("mbpos").value = settings.barPos;
+            document.body.style.color = settings.color;
+        });
+} else {
+    fetch("https://dindegdps.localhost/get/color")
+        .then(response => response.text())
+        .then(color => {
+            document.body.style.color = color;
+        });
+}
 
-// window.location.search is a deprecated POS
-var phr = languages[navigator.userAgent.split("-")[1]];
-
-// Does anyone know a better way of handling this?
-quoicouSend("uquery");
-quoicouSend("SetColor");
 document.getElementById("gdps").style.display = "none";
 document.getElementById("launcher").style.display = "none";
 let last = "updates";
@@ -69,7 +70,6 @@ function load(page) {
     document.getElementById(last).style.display = "none";
     last = page;
     document.getElementById(page).style.display = "";
-    if(page == "updates") quoicouSend("uquery");
 }
 
 function music(url = document.getElementById("mlurl").value) {

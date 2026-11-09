@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Something</title>
+    <!-- Basic Icons -->
+    <link href="./css/boxicons.min.css" rel="stylesheet">
+    <!-- Brand Icons -->
+    <link href="./css/boxicons-brands.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            display: flex; /* LARPPPPPPP OPSEC OPSEC OPSEC OPSEC */
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            font-family: Octarine;
+        }
+        #sidebar {
+            width: 100%;
+            background-color: black;
+            color: white;
+        }
+        #iconsContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+        a {
+            color: white;
+            text-decoration: solid;
+            font-size: 60px;
+        }
+        a:hover {
+            color: gray;
+        }
+        #iconsContainer > div {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #update {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function go(path) { window.chrome.webview.postMessage(path); }
+    </script>
+    <div id="sidebar">
+        <div id="iconsContainer">
+            <div>
+                <a href="javascript:go('https://dindegdps.141412.xyz/index.html')" class="bx bx-home"></a>
+                <a href="javascript:go('https://gdps.dimisaio.be/database/dashboard')" class="bx bx-joystick"></a>
+                <a href="javascript:go('https://browse.141412.xyz')" class="bx bx-globe"></a>
+                <a href="javascript:go('https://dindegdps.141412.xyz/list.html')" class="bx bx-address-book"></a>
+            </div>
+            <div>
+                <a href="javascript:go('update')" class="bx bx-refresh-cw-dot" id="update"></a>
+                <a href="javascript:go('https://dindegdps.141412.xyz/tips.html')" class="bx bx-light-bulb-alt"></a>
+                <a href="javascript:go('https://dindegdps.141412.xyz/settings.html')" class="bx bx-gear"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

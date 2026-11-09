@@ -16,13 +16,13 @@
     body {   
       opacity: 0;
       transition: opacity .5s;   
-      background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,50,1) 90%, rgba(0,0,0,1) 100%);
+      background: linear-gradient(90deg, rgba(0,0,0,1) 0%, darkblue 30%, darkblue 70%, rgba(0,0,0,1) 100%);
       color: cornflowerblue;
       font-family: Octarine;
       overflow: hidden;
     }
     #content {
-      height: 100%;
+      margin-top: 10px;
       display: flex;
       justify-content: space-between;
       flex-direction: column;
@@ -30,7 +30,6 @@
     }
     #newAlert {
       width: 80vw;
-      height: 25vh;
       display: flex;
       justify-content: center;
       align-self: center;
@@ -42,26 +41,39 @@
       display: flex;
       align-items: center;
     }
-    #down {
-      margin-top: auto;
-      margin-bottom: 8vh;
-    }
-    /* Ty chatgpt */
-    #footer {
-      font-size: clamp(12px, 5vw, 26px); /* Min 12px, Max 20px, Scales with viewport width */
-      white-space: nowrap;              /* Prevent wrapping */
-      overflow: hidden;                 /* Hide overflow if necessary */
-      text-overflow: ellipsis;          /* Add ellipsis if text is too long */
-    }
     #f2 {
+      position: absolute;
+      bottom: 0;
+      right: 10px;
       font-size: 48px;
+    }
+    #f3 {
+      position: absolute;
+      bottom: 5px;
+      left: 10px;
+      font-size: 16px;
+      zoom: 120%;
     }
     #greetingText {
       margin-bottom: 0;
     }
+    #gdpsBox {
+        border-style: dashed;
+        border-radius: 5px;
+        border-color: white;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+        overflow: hidden;
+        height: 10vh;
+    }
+    #gdpsBox > img {
+      object-fit: contain;
+      height: auto;
+    }
   </style>
-  <script src="./js/trans.js"></script>
   <script src="./js/libdinde-locale.js"></script>
+  <script src="./js/trans.js"></script>
 </head>
 <body>
   <div id="content">
@@ -72,20 +84,47 @@
         No news for now!
       </p>
     </div>
-    <div id="down">
-      <h4 id="altText">
-        [Alt Accounts? Hold CTRL while clicking PLAY]
-      </h4>
-      <div id="f2">
-        <a href="javascript:window.chrome.webview.postMessage('ext://discord.gg/sVcFBddjfj')"><i class='bx bxl-discord-alt'></i></a>&nbsp;<a href="javascript:window.chrome.webview.postMessage('ext://youtube.com/@dindegdps')"><i class='bx bxl-youtube' ></i></a>&nbsp;<a href="javascript:window.chrome.webview.postMessage('ext://twitter.com/dimisaio')"><i class='bx bxl-twitter' ></i></a>&nbsp;<a href="javascript:window.chrome.webview.postMessage('ext://tiktok.com/@masckmaster')"><i class="bxl bx-tiktok"></i></a>&nbsp;<a href="javascript:transitionToPage('more.html')"><i class='bx bx-folder-plus'></i></a>
-      </div>
-      <div id="footer">
-        <a href="https://gdps.dimisaio.be/">Tools</a> | <a href="https://browse.141412.xyz">GDBrowser</a> | <a href="./list.html">GDPSs</a> | <a href="javascript:transitionToPage('settings.html')">Settings</a> | <a href="javascript:transitionToPage('credits.html')">Credits</a>
-      </div>
+    <h2 style="margin: 15px;">Recently played GDPSs</h2>
+    <div id="f2">
+      <a href="javascript:window.chrome.webview.postMessage('ext://discord.gg/sVcFBddjfj')"><i class='bxl bx-discord-alt'></i></a>&nbsp;<a href="javascript:window.chrome.webview.postMessage('ext://youtube.com/@dindegdps')"><i class='bxl bx-youtube' ></i></a>&nbsp;<a href="javascript:window.chrome.webview.postMessage('ext://twitter.com/dimisaio')"><i class='bxl bx-twitter' ></i></a>&nbsp;<a href="javascript:window.chrome.webview.postMessage('ext://tiktok.com/@masckmaster')"><i class="bxl bx-tiktok"></i></a>&nbsp;<a href="javascript:window.chrome.webview.postMessage('ext://gdpshub.com')"><img src="./fonts/detail.svg" alt="ghub" style="height: 48px;"></a>
+    </div>
+    <div id="f3">
+        <input type="checkbox" id="alt"><span id="altText">Alt Mode</span>
     </div>
   </div>
   <script src="./js/libdinde.js"></script>
   <script>
+        function start(x) {
+          const base = alt.checked ? "stalt://" : "start://";
+          quoicouSend(base + x);
+        }
+        let gdpsList = [];
+
+        fetch("https://dindegdps.localhost/get/gdps")
+        .then(response => response.json())
+        .then(data => {
+              for(var i = 0; i < 2; i++) {
+                if(!data[i]) return;
+                var element = data[i];
+                var x = document.createElement("a");
+                x.id = "gdpsBox";
+                x.href = "javascript:start('" + element + "')";
+
+                var y = document.createElement("img");
+                y.src = "https://dindegdps.localhost/get/img/" + element;
+                y.height = 100;
+                y.width = 100;
+                x.append(y);
+
+                var title = document.createElement("h2");
+                title.innerText = element;
+
+                x.append(title);
+
+                document.body.append(x);
+              }
+          });
+
         var lol = new Date;
         var hour = lol.getHours();
         var greeting;
@@ -100,20 +139,19 @@
         noNews.innerText = phr.noNewsText;
         welcomeText.innerText = phr.welcomeText;
         altText.innerText = phr.altText;
+
+        /*
         footer.getElementsByTagName("a")[0].innerText = phr.toolsLink;
         footer.getElementsByTagName("a")[3].innerText = phr.settingsLink;
         footer.getElementsByTagName("a")[4].innerText = phr.creditsLink;
-        var lang = navigator.userAgent.split("-")[1];
-        /* 
-          Забирай меня скорей       🦃🦃        🦃🦃🦃  
+          Забирай меня скорей       🦃🦃       🦃🦃🦃  
           Увози за сто морей       🦃 🦃       🦃   🦃 
           И целуй меня везде          🦃        🦃   🦃 
-          Восемнадцать мне уже        🦃         🦃🦃🦃  (not yet)
+          Восемнадцать мне уже        🦃        🦃🦃🦃
           Забирай меня скорей         🦃        🦃   🦃 
           Увози за сто морей          🦃        🦃   🦃 
           И целуй меня везде          🦃        🦃   🦃 
-          Восемнадцать мне уже      🦃🦃🦃      🦃🦃🦃  
-        */
+          Восемнадцать мне уже      🦃🦃🦃     🦃🦃🦃  
         switch(lang) {
           case "bg":
           case "ru":
@@ -124,6 +162,7 @@
 
         // if(footer.innerText.length >= 50) footer.style.fontSize = (footer.innerText.length * 0.4) + "px";
         // if(footer.innerText.length >= 60) footer.style.fontSize = (footer.innerText.length * 0.29) + "px";
+        */
 
         fetch("https://dogcheck.dimisaio.be/news.php?language=" + navigator.userAgent.split("-")[1]).then((response) => response.text()).then(data => {
           if(!data) return;
@@ -133,8 +172,6 @@
           newAlert.appendChild(news);
           gotNews.innerText = data;
         });
-        var random = Math.floor(Math.random() * 10);
-        if(random == 8) quoicouSend("RefreshIsCool");
   </script>
 </body>
 </html>

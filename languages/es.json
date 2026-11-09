@@ -1,0 +1,47 @@
+{
+    "srResetText":
+        "¿Está SEGURO de que desea restablecer la configuración a la predeterminada? Esta acción es IRREVERSIBLE, DimisAIO no se va a hacer responsable.",
+    "cgdpsText":
+        "Al habilitar esta opción, se habilitará el protocolo dgdps://. DimisAIO no se va hacer responsable si la habilita.\n¿Desea habilitarla?",
+    "destText": "Elija el destino GDPS (gd19, gd20, gd21, gd22, ...)",
+    "copyExit": "Seleccionar",
+    "musicConfirm": "¿Descargar la música?",
+
+    "goodMorning": "Buenos días",
+    "goodAfternoon": "Buenas tardes",
+    "goodEvening": "Buenas noches",
+    "toolsLink": "Herramientas",
+    "settingsLink": "Ajustes",
+    "creditsLink": "Créditos",
+    "welcomeText": "Bienvenido a",
+    "noNewsText": "¡Ninguna noticia por ahora!",
+    "altText": "Modo Alt (cuenta)",
+
+    "updatesCat": "Actualizaciones",
+    "autoUpdatesText": "Buscar actualizaciones automáticamente",
+    "updateChannelText": "Actualizar el canal:",
+    "missingDepText": "¿Dependencias faltantes?",
+    "customPSText": "GDPS personalizados",
+    "galleryText": "Galería",
+    "menuloopText": "Enlace directo (bucle de menú)",
+    "defaultLangText": "Por defecto",
+    "simpleModeText": "Habilitar el modo simple",
+    "resetSettingsText": "Restablecer la configuración",
+    "closeLauncherText": "Cerrar lanzador después de jugar",
+    "UBLocationText": "Posición de la barra de menú: ",
+    "UBCenter": "Centro",
+    "UBLeft": "Izquierda",
+    "UBRight": "Derecha",
+
+    "moreSocialsText": "Más redes sociales",
+
+    "creditsText": "¡Créditos!",
+    "playersText": "Jugadores:",
+    "musicText": "🎵 Música 🎵",
+    "usedFontsText": "Fuentes utilizadas en el lanzador:",
+    "encouragementText": "Haz clic en JUGAR y MARCA un punto en nuestra historia",
+    "backText": "< Atrás",
+    "browseText": "Navegar",
+    "uninstallText": "Desinstalar",
+    "syncButtonText": "Sincronizar (se requiere cuenta)"
+}

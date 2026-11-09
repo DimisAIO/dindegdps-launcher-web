@@ -1,0 +1,47 @@
+{
+    "srResetText":
+        "'Ayarları varsayılana sıfırlamak istediğinizden emin misiniz?\nBu eylem geri ALINAMAZ\nDimisAIO olacak şeylerden sorumlu değildir.",
+    "cgdpsText":
+        "'Bunu etkinleştirdiğinizde, dgdps:// protokolü aktifleştirilecektir\nProtokolü etkinleştirdiğinizde DimisAIO hiçbir sorumluluk kabul etmeyecektir!\nEtkinleştirmek istediğinizden emin misiniz?",
+    "destText": "Hedef GDPS'i seçin (gd19, gd20, gd21, gd22, ...)",
+    "copyExit": "Seç",
+    "musicConfirm": "Müziği indirmek ister misiniz?",
+
+    "goodMorning": "Günaydın",
+    "goodAfternoon": "İyi akşamlar",
+    "goodEvening": "Tünaydın",
+    "toolsLink": "Araçlar",
+    "settingsLink": "Ayarlar",
+    "creditsLink": "Emeği geçenler",
+    "welcomeText": "'e hoşgeldiniz",
+    "noNewsText": "Şu anlık bir haber yok!",
+    "altText": "Alt (hesap) Modu",
+
+    "updatesCat": "Güncellemeler",
+    "autoUpdatesText": "Otomatik olarak güncellemeler için kontrol et",
+    "updateChannelText": "Güncelleme kanalı:",
+    "missingDepText": "Kayıp bağlılıklar?",
+    "customPSText": "Özel GDPS'ler",
+    "galleryText": "Galeri",
+    "menuloopText": "Direkt link (menuloop)",
+    "defaultLangText": "Varsayılan",
+    "simpleModeText": "Basit modu etkinleştir",
+    "resetSettingsText": "Ayarları sıfırla",
+    "closeLauncherText": "Oynaya bastıktan sonra başlatıcıyı kapat",
+    "UBLocationText": "Menü çubuğu konumu: ",
+    "UBCenter": "Merkez",
+    "UBLeft": "Sol",
+    "UBRight": "Sağ",
+
+    "moreSocialsText": "Diğer sosyal ağlar",
+
+    "creditsText": "Emeği geçenler!",
+    "playersText": "Oyuncular :",
+    "musicText": "🎵 Müzik 🎵",
+    "usedFontsText": "Başlatıcıda kullanılan yazı tipleri :",
+    "encouragementText": "Oynaya bas ve tarihimizde bir noktayı işaretle",
+    "backText": "< Geri",
+    "browseText": "Göz at",
+    "uninstallText": "Kaldır",
+    "syncButtonText": "Senkronizasyon (Hesap Gerekli)"
+}

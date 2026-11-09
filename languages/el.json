@@ -1,0 +1,47 @@
+{
+    "srResetText":
+        "Θέλετε να επαναφέρετε τις ρυθμίσεις σας στις προεπιλεγμένες Αυτή η ενέργεια είναι ΑΜΕΤΑΚΛΗΤΗ. Ο DimisAIO δε θα λάβει καμία ευθύνη.",
+    "cgdpsText":
+        "Ενεργοποιώντας αυτό, το πρωτόκολλο dgdps:// θα είναι ενεργοποιημένο. Ο DimisAIO δε θα αναλάβει καμία ευθύνη αν ενεργοποιήσετε αυτήν την επιλογή!\nΘέλετε να την ενεργοποιήσετε;",
+    "destText": "Επιλέξτε το GDPS προορισμού (gd19, gd20, gd21, gd22, …)",
+    "copyExit": "Επιλογή",
+    "musicConfirm": "Λήψη μουσικής;",
+
+    "goodMorning": "Καλημέρα",
+    "goodAfternoon": "Καλησπέρα",
+    "goodEvening": "Καλό βράδυ",
+    "toolsLink": "Εργαλεία",
+    "settingsLink": "Ρυθμίσεις",
+    "creditsLink": "Ευχαριστίες",
+    "welcomeText": "Καλώς ήλθατε στο",
+    "noNewsText": "Δεν υπάρχουν νέα προς το παρόν!",
+    "altText": "Λειτουργία Alt (λογαριασμο)",
+
+    "updatesCat": "Ενημερώσεις",
+    "autoUpdatesText": "Αυτόματος έλεγχος ενημερώσεων",
+    "updateChannelText": "Κανάλι Ενημέρωσης:",
+    "missingDepText": "Έλλειψη Εξαρτήσεων;",
+    "customPSText": "Άλλα GDPS",
+    "galleryText": "Συλλογή GDPS",
+    "menuloopText": "Σύνδεσμος MP3 (menuloop)",
+    "defaultLangText": "Προεπιλεγμένο",
+    "simpleModeText": "Ενεργοποίηση Απλής Λειτουργίας",
+    "resetSettingsText": "Επαναφορά Ρυθμίσεων",
+    "closeLauncherText": "Κλείσιμο του πρόγραμμά εκκίνησης μετά το \"Play\"",
+    "UBLocationText": "Θέση γραμμής μενού: ",
+    "UBCenter": "Κέντρο",
+    "UBLeft": "Αριστερά",
+    "UBRight": "Δεξιά",
+
+    "moreSocialsText": "Περισσότερα κοινωνικά δίκτυα",
+
+    "creditsText": "Ευχαριστίες!",
+    "playersText": "Παίκτες :",
+    "musicText": "🎵 Μουσική 🎵",
+    "usedFontsText": "Χρησιμοποιημένες γραμματοσειρές στο πρόγραμμα εκκίνησης:",
+    "encouragementText": "Κάντε κλικ στο κουμπί PLAY και ΣΗΜΕΙΩΣΤΕ ένα σημείο στην ιστορία μας",
+    "backText": "< Πίσω",
+    "browseText": "Εξερεύνηση",
+    "uninstallText": "Απεγκατάσταση",
+    "syncButtonText": "Συγχρονισμός (Απαιτείται λογαριασμός)"
+}
